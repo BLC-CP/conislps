@@ -1,66 +1,73 @@
-<?php 
+<?php
 
-function uniqueId($idU, $table){
-    global $conn;
+function uniqueId($idU, $table)
+{
+	global $conn;
 
-    return $uniqueId = "$idU" . (date('Y') . 0 . 0 + mysqli_num_rows(mysqli_query($conn, "SELECT * FROM $table")) + 1);
+	return $uniqueId = "$idU" . (date('Y') . 0 . 0 + mysqli_num_rows(mysqli_query($conn, "SELECT * FROM $table")) + 1);
 }
 
-function mq($sql){
+function mq($sql)
+{
 	global $conn;
 
 	return $mq = mysqli_query($conn, $sql);
 }
 
-function hamos($tbName, $idTable){
+function hamos($tbName, $idTable)
+{
 	global $conn;
 	$id = $_GET['id'];
 	return $hamos = mysqli_query($conn, "DELETE FROM $tbName WHERE $idTable = $id");
-
 }
 
-function mfa($qName){
+function mfa($qName)
+{
 	global $conn;
 
 	return $mfa = mysqli_fetch_array($qName);
 }
 
-function mnr($mnr){
+function mnr($mnr)
+{
 	global $conn;
 
 	return $mnr = mysqli_num_rows($mnr);
 }
 
-function mfa_mq($tName, $idT){
+function mfa_mq($tName, $idT)
+{
 	global $conn;
 	$id = $_GET['id'];
 	return $mfa_mq = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM $tName WHERE $idT = '$id'"));
 }
 
 
-function alert($alertName, $losLocation, $salaLocation){
+function alert($alertName, $losLocation, $salaLocation)
+{
 	global $conn;
 
-	if(mysqli_affected_rows($conn) > 0){
+	if (mysqli_affected_rows($conn) > 0) {
 		echo "
 		<script>
 		alert('Dadus $alertName ho susesu');
 		document.location.href='?page=$losLocation';
 		</script>
 		";
-	}else{
+	} else {
 		echo "
 		<script>
 		alert('Dadus $alertName ladiak');
 		document.location.href='?page=$salaLocation';
 		</script>
-		";exit;
+		";
+		exit;
 	}
-
 }
 
 // upload imagen estudante
-function uploadFotos(){
+function uploadFotos()
+{
 	global $conn;
 
 	$fileName = $_FILES['foto']['name'];
@@ -68,8 +75,8 @@ function uploadFotos(){
 	$fileExtensi = explode('.', $fileName);
 	$fileExtensi = strtolower(end($fileExtensi));
 	$nrnFoun = uniqid();
-	$nrnFoun .='';
-	$nrnFoun .=$fileExtensi;
+	$nrnFoun .= '';
+	$nrnFoun .= $fileExtensi;
 
 
 	move_uploaded_file($tmpName, 'imgAdmin/' . $nrnFoun);
@@ -78,7 +85,8 @@ function uploadFotos(){
 // end upload imagen estudante
 
 // upload imagen estudante
-function uploadFoto(){
+function uploadFoto()
+{
 	global $conn;
 
 	$fileName = $_FILES['foto']['name'];
@@ -97,13 +105,11 @@ function uploadFoto(){
 	// }
 
 	$nrnFoun = uniqid();
-	$nrnFoun .='';
-	$nrnFoun .=$fileExtensi;
+	$nrnFoun .= '';
+	$nrnFoun .= $fileExtensi;
 
 
 	move_uploaded_file($tmpName, 'imgs/' . $nrnFoun);
 	return $nrnFoun;
 }
 // end upload imagen estudante
-
-?>

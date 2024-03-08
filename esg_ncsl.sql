@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 05, 2024 at 06:48 PM
+-- Generation Time: Mar 08, 2024 at 03:19 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -45,7 +45,8 @@ CREATE TABLE `tb_admin` (
 --
 
 INSERT INTO `tb_admin` (`id_admin`, `nrn_admin`, `sexo`, `data_moris`, `hela_fatin`, `no_tlp`, `img_admin`, `username`, `password`, `level`) VALUES
-('2', 'Elijario Fernandes', 'Mane', '2024-02-07', 'Palapasu', '76186755', 'download.png', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin');
+('1', 'Adriana', 'Feto', '2024-02-25', 'Farol', '78595404', 'Screenshot 2023-08-10 101350.png', 'adriana', 'a01183854d7e784f0455d559f4327d55', 'admin'),
+('2', 'Brito', 'Mane', '2024-02-26', 'Caicoli', '74553522', '65eb1e0476045png', 'brito', 'aca8698eac2050efa48cc339caad3989', 'admin');
 
 -- --------------------------------------------------------
 

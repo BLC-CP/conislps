@@ -3,7 +3,7 @@
     <ul class=" navbar-right">
       <li class="nav-item dropdown open" style="padding-left: 15px;">
         <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-          <img src="imgUser/<?= $dadmin['img_admin'] ?>" alt=""><small class="text-white"><?= $dadmin['nrn_admin'] ?></small>
+          <img src="imgadmin/<?= $dadmin['img_admin'] ?>" alt=""><small class="text-white"><?= $dadmin['nrn_admin'] ?></small>
         </a>
         <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="?page=admin"> Profile</a>

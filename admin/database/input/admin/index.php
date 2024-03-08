@@ -40,11 +40,11 @@
 
 
 								<tbody>
-									<?php 
+									<?php
 									$query = mq("SELECT * FROM tb_admin");
 									$no = 1;
 									while ($data = mfa($query)) {
-										?>
+									?>
 										<tr>
 											<td><?= $no++; ?></td>
 											<td><?= $data['nrn_admin'] ?></td>
@@ -52,11 +52,11 @@
 											<td><?= $data['data_moris'] ?></td>
 											<td><?= $data['hela_fatin'] ?></td>
 											<td><?= $data['no_tlp'] ?></td>
-											<td><img src="imgUser/<?= $data['img_admin'] ?>" width='50px'></td>
+											<td><img src="imgadmin/<?= $data['img_admin'] ?>" width='50px'></td>
 											<td><?= $data['level'] ?></td>
 											<td>
 												<a href="?page=hdadmin&id=<?= $data['id_admin'] ?>" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
-												<a href="?page=hmadmin&id=<?= $data['id_admin'] ?>" onclick="return confirm('Tebes atu hamos dadus <?= $data['nrn_admin'] ?>')" class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i></a>
+												<a href="?page=hmadmin&id=<?= $data['id_admin'] ?>" onclick="return confirm('Tebes atu hamos dadus <?= $data['nrn_admin'] ?>')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
 											</td>
 										</tr>
 									<?php } ?>

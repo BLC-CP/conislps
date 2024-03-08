@@ -8,7 +8,7 @@
   <!-- menu profile quick info -->
   <div class="profile clearfix">
     <div class="profile_pic">
-      <img src="imgUser/<?= $dadmin['img_admin'] ?>" alt="..." class="img-circle profile_img">
+      <img src="imgadmin/<?= $dadmin['img_admin'] ?>" alt="..." class="img-circle profile_img">
     </div>
     <div class="profile_info">
       <span>BEMVINDO,</span>
